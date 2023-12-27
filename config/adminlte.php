@@ -150,10 +150,11 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
+    'layout_fixed_sidebar' => true, //El sidebar se mantiene fijo durante el uso del scroll
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
+
 
     /*
     |--------------------------------------------------------------------------
@@ -252,8 +253,13 @@ return [
     |
     */
 
-    'use_route_url' => false,
-    'dashboard_url' => 'home',
+
+    // 'use_route_url' => false,
+    // 'dashboard_url' => 'home',
+
+    'use_route_url' => false,   // Lo cambie para apuntar a la ruta HOME, de otra manera
+    'dashboard_url' => '/',     // Lo cambie para apuntar a la ruta HOME, de otra manera
+
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -329,6 +335,46 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
+        [
+            'text'        => 'Agenda',
+            //'url'         => 'admin/pages',
+            'route'       => 'admin.agenda',
+            'icon'        => 'fas fa-fw fa-users',
+            'active'      => ['admin/agenda*']
+        ],
+        [
+            'text'        => 'Permissions',
+            'icon'        => 'fa-solid fa-box-open',
+            'icon_color'  => 'yellow',
+            'can'         => 'Editar role',   // SEGURIDAD - PERMISO
+            'submenu'     => [
+                [
+                    'text'        => 'Lista de Roles',
+                    //'url'         => 'admin/pages',
+                    'route'       => 'admin.roles.index',
+                    'icon'        => 'fas fa-fw fa-user-cog',
+                    'active'      => ['admin/roles*']
+                ],
+
+
+            ]
+        ],
+
+        [
+            'text'        => 'Usuarios',
+            //'url'         => 'admin/pages',
+            'route'       => 'admin.users.index',
+            'icon'        => 'fas fa-fw fa-users',
+            'active'      => ['admin/users*']
+        ],
+        [
+            'text'        => 'Proyectos',
+            //'url'         => 'admin/pages',
+            'route'       => 'admin.projects.index',
+            'icon'        => 'fas fa-fw fa-users',
+            'active'      => ['admin/users*']
+        ],
+
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
@@ -537,5 +583,5 @@ return [
     |
     */
 
-    'livewire' => false,
+    'livewire' => true,  //Lo cambie
 ];

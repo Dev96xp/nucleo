@@ -70,7 +70,8 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    //'timezone' => 'UTC',
+    'timezone' => env('APP_TIMEZONE','UTC'),
 
     /*
     |--------------------------------------------------------------------------
@@ -170,6 +171,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class      // lo agregue
     ])->toArray(),
 
     /*

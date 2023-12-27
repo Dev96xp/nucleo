@@ -1,0 +1,18 @@
+Paquetes instalados y consideraciones
+
+- JetStream
+- Laravel Backup
+- AdminLTE
+- Spatie Permission
+- Tuve un error para Instalar (laravelcollective/html (v6.4.1)) y hice esto y se corigio el error
+    a) Agregue esta linea a Composer.json ("ext-zip": "*")
+    b) Y descomente (extension=zip), en el archivo php.ini
+    Otra cosa en windows la extencion (;extension=php_zip.dll) cambio a (;extension=zip)
+- laravelcollective - aunque hay un arecomendacion de que ya no se use por que segun fue abandonada
+- Se intalara fullcalendar.io
+
+- {{-- IMPORTANTE - NOSE POR QUE, PERO TUVE QUE COMENTAR LA LINEA DE ABAJO, ESTO POR QUE ME CREA UN ERROR
+       DICIENDO QUE TENGO VARIAS INSTANCIAS CORRIENDO DE LIVEWIRE, Y ASI FUNCIONO MIS MODALES QUE NO CORRIAN --}}
+  {{-- @livewireScripts --}}
+
+- composer require mews/purifier, lo agregue 11/6/2023
