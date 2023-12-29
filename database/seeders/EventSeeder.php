@@ -16,22 +16,26 @@ class EventSeeder extends Seeder
         Event::create([
             'title' => 'Meeting',
             'start' => now(),
-            'end' => now()
+            'end' => now(),
+            'description' => "hola",
         ]);
         Event::create([
             'title' => 'Probar Vestido',
             'start' => now(),
-            'end' => now()
+            'end' => now(),
+            'description' => "hola",
         ]);
         Event::create([
             'title' => 'Ajuste Vestido',
             'start' => now(),
-            'end' => now()
+            'end' => now(),
+            'description' => "hola",
         ]);
         Event::create([
             'title' => 'Medidas Chambelanes',
             'start' => now(),
-            'end' => now()
+            'end' => now(),
+            'description' => "hola",
         ]);
     }
 }
